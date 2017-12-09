@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+   devise_for :users
+#   devise_scope :user do
+ #     get 'sign_in', :to => 'devise/sessions#new', :as => :new_user_session
+  #    post 'sign_in', :to => 'devise/session#create', :as => :user_session
+  #    get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+ # end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+   #root 'welcome#index'
+  root 'static_pages#home'
+  #root 'devise/session#new'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
